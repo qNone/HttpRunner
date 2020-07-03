@@ -1,61 +1,67 @@
+
 # HttpRunner
 
-[![LICENSE](https://img.shields.io/github/license/HttpRunner/HttpRunner.svg)](https://github.com/HttpRunner/HttpRunner/blob/master/LICENSE) [![travis-ci](https://travis-ci.org/HttpRunner/HttpRunner.svg?branch=master)](https://travis-ci.org/HttpRunner/HttpRunner) [![coveralls](https://coveralls.io/repos/github/HttpRunner/HttpRunner/badge.svg?branch=master)](https://coveralls.io/github/HttpRunner/HttpRunner?branch=master) [![pypi version](https://img.shields.io/pypi/v/HttpRunner.svg)](https://pypi.python.org/pypi/HttpRunner) [![pyversions](https://img.shields.io/pypi/pyversions/HttpRunner.svg)](https://pypi.python.org/pypi/HttpRunner)
+[![downloads](https://pepy.tech/badge/httprunner)](https://pepy.tech/project/httprunner)
+[![unittest](https://github.com/httprunner/httprunner/workflows/unittest/badge.svg
+)](https://github.com/httprunner/httprunner/actions)
+[![integration-test](https://github.com/httprunner/httprunner/workflows/integration_test/badge.svg
+)](https://github.com/httprunner/httprunner/actions)
+[![codecov](https://codecov.io/gh/httprunner/httprunner/branch/master/graph/badge.svg)](https://codecov.io/gh/httprunner/httprunner)
+[![pypi version](https://img.shields.io/pypi/v/httprunner.svg)](https://pypi.python.org/pypi/httprunner)
+[![pyversions](https://img.shields.io/pypi/pyversions/httprunner.svg)](https://pypi.python.org/pypi/httprunner)
+[![TesterHome](https://img.shields.io/badge/TTF-TesterHome-2955C5.svg)](https://testerhome.com/github_statistics)
 
-HttpRunner is an HTTP(S) protocol-oriented universal testing framework. Write testing scripts in `YAML/JSON` once, you can then achieve automated testing, performance testing, online monitoring, continuous integration and other testing needs.
-
-Formerly known as `ApiTestEngine`.
+*HttpRunner* is a simple & elegant, yet powerful HTTP(S) testing framework. Enjoy! ✨ 🚀 ✨
 
 ## Design Philosophy
 
-- Take full reuse of Python's existing powerful libraries: [`Requests`][Requests], [`unittest`][unittest] and [`Locust`][Locust].
-- Convention over configuration.
-- Pursuit of high rewards, write once and achieve a variety of testing needs
+- Convention over configuration
+- ROI matters
+- Embrace open source, leverage [`requests`][requests], [`pytest`][pytest], [`pydantic`][pydantic], [`allure`][allure] and [`locust`][locust].
 
 ## Key Features
 
-- Inherit all powerful features of [`Requests`][Requests], just have fun to handle HTTP(S) in human way.
-- Define testcases in YAML or JSON format in concise and elegant manner.
-- Record and generate testcases with [`HAR`][HAR] support. see [`har2case`][har2case].
-- Supports `function`/`variable`/`extract`/`validate` mechanisms to create full test scenarios.
-- Supports perfect hook mechanism.
-- With `debugtalk.py` plugin, module functions can be auto-discovered in recursive upward directories.
-- Testcases can be run in diverse ways, with single testcase, multiple testcases, or entire project folder.
-- Test report is concise and clear, with detailed log records.
-- With reuse of [`Locust`][Locust], you can run performance test without extra work.
+- Inherit all powerful features of [`requests`][requests], just have fun to handle HTTP(S) in human way.
+- Define testcase in YAML or JSON format, run with [`pytest`][pytest] in concise and elegant manner. 
+- Record and generate testcases with [`HAR`][HAR] support.
+- Supports `variables`/`extract`/`validate`/`hooks` mechanisms to create extremely complex test scenarios.
+- With `debugtalk.py` plugin, any function can be used in any part of your testcase.
+- With [`jmespath`][jmespath], extract and validate json response has never been easier.
+- With [`pytest`][pytest], hundreds of plugins are readily available. 
+- With [`allure`][allure], test report can be pretty nice and powerful.
+- With reuse of [`locust`][locust], you can run performance test without extra work.
 - CLI command supported, perfect combination with `CI/CD`.
 
-## Documentation
+## Sponsors
 
-HttpRunner is rich documented.
+Thank you to all our sponsors! ✨🍰✨ ([become a sponsor](docs/sponsors.md))
 
-- [`User documentation in English (outdated)`][user-docs-en]
-- [`中文用户使用手册`][user-docs-zh]
-- [`开发历程记录博客`][development-blogs]
+### 金牌赞助商（Gold Sponsor）
 
-## How to Contribute
+[<img src="docs/assets/hogwarts.png" alt="霍格沃兹测试学院" width="400">](https://ceshiren.com/)
 
-1. Check for [open issues](https://github.com/HttpRunner/HttpRunner/issues) or [open a fresh issue](https://github.com/HttpRunner/HttpRunner/issues/new/choose) to start a discussion around a feature idea or a bug.
-2. Fork [the repository](https://github.com/httprunner/httprunner) on GitHub to start making your changes to the **master** branch (or branch off of it). You also need to comply with the [development rules](docs/dev-rules.md).
-3. Write a test which shows that the bug was fixed or that the feature works as expected.
-4. Send a pull request, you will then become a [contributor](https://github.com/HttpRunner/HttpRunner/graphs/contributors) after it gets merged and published.
+> [霍格沃兹测试学院](https://ceshiren.com/) 是业界领先的测试开发技术高端教育品牌，隶属于测吧（北京）科技有限公司。学院课程均由 BAT 一线测试大咖执教，提供实战驱动的接口自动化测试、移动自动化测试、性能测试、持续集成与 DevOps 等技术培训，以及测试开发优秀人才内推服务。[点击学习!](https://ke.qq.com/course/254956?flowToken=1014690)
+
+霍格沃兹测试学院是 HttpRunner 的首家金牌赞助商。
+
+### 开源服务赞助商（Open Source Sponsor）
+
+[<img src="docs/assets/sentry-logo-black.svg" alt="Sentry" width="150">](https://sentry.io/_/open-source/)
+
+HttpRunner is in Sentry Sponsored plan.
 
 ## Subscribe
 
 关注 HttpRunner 的微信公众号，第一时间获得最新资讯。
 
-![][qrcode_for_httprunner]
+![](docs/assets/qrcode.jpg)
 
-[Requests]: http://docs.python-requests.org/en/master/
-[unittest]: https://docs.python.org/3/library/unittest.html
-[Locust]: http://locust.io/
-[PyUnitReport]: https://github.com/HttpRunner/PyUnitReport
-[Jenkins]: https://jenkins.io/index.html
-[har2case]: https://github.com/HttpRunner/har2case
-[user-docs-en]: http://httprunner.org/
-[user-docs-zh]: http://cn.httprunner.org/
-[development-blogs]: http://debugtalk.com/tags/HttpRunner/
+[requests]: http://docs.python-requests.org/en/master/
+[pytest]: https://docs.pytest.org/
+[pydantic]: https://pydantic-docs.helpmanual.io/
+[locust]: http://locust.io/
+[jmespath]: https://jmespath.org/
+[allure]: https://docs.qameta.io/allure/
 [HAR]: http://httparchive.org/
-[Swagger]: https://swagger.io/
-[Postman Collection Format]: http://blog.getpostman.com/2015/06/05/travelogue-of-postman-collection-format-v2/
-[qrcode_for_httprunner]: https://raw.githubusercontent.com/HttpRunner/HttpRunner/master/docs/images/qrcode_for_httprunner.jpg
+
+
